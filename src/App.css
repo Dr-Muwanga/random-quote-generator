@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  background-color: #f32525;
+}
+
+div {
+  position: relative;
+  z-index: 2;
+}
+.footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  font-size: 0.9rem;
+  margin: 15px auto 30px auto;
+}
+
+.footer a {
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+#quote-box {
+  border-radius: 3px;
+  position: relative;
+  width: 450px;
+  padding: 40px 50px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: table;
+  transition: all 0.5s ease-in-out;
+}
+
+#quote-box .quote-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 480px;
+  height: auto;
+  clear: both;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+#quote-box .quote-text .icon {
+  font-size: 1rem;
+  margin: 0.4rem;
+  transition: all 0.5s ease-in-out;
+}
+
+#quote-box .quote-author {
+  width: 480px;
+  height: auto;
+  clear: both;
+  padding-top: 20px;
+  font-size: 1.2rem;
+  text-align: right;
+  transition: all 0.5s ease-in-out;
+}
+
+#quote-box .buttons {
+  width: 480px;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+
+#quote-box .buttons .button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #333;
+  height: 40px;
+  font-size: 0.9rem;
+  padding: 10px 20px 8px 20px;
+  margin-top: 35px;
+  opacity: 1;
+}
+
+#quote-box .buttons .button:hover {
+  opacity: 0.9;
+}
