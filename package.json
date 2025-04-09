@@ -1,5 +1,7 @@
 {
   "name": "random-quote-generator",
+  "homepage": "https://Dr-Muwanga.github.io/random-quote-generator",
+  "description": "A simple random quote generator built with React. As the quotes change, the background also changes to match the theme of the quote.",
   "private": true,
   "version": "0.0.0",
   "author": "Muwanga David Richard",
@@ -8,7 +10,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
