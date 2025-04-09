@@ -17,6 +17,14 @@ const Container = () => {
     getRandomQuote()
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      getRandomQuote();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const changeColor = () => {
     setColor(Colors[Math.floor(Math.random() * Colors.length)]);
   }
