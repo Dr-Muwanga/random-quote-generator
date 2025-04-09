@@ -13,6 +13,7 @@ body {
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
   color: #333;
+  transition: all 0.5s ease-in-out;
   background-color: #f32525;
 }
 
@@ -65,9 +66,10 @@ div {
   width: 480px;
   height: auto;
   clear: both;
+  font-weight: 600;
   padding-top: 20px;
   font-size: 1.2rem;
-  text-align: right;
+  text-align: center;
   transition: all 0.5s ease-in-out;
 }
 
@@ -96,4 +98,22 @@ div {
 
 #quote-box .buttons .button:hover {
   opacity: 0.9;
+}
+
+.footer {
+  font-size: 0.9rem;
+  padding-top: 60px;
+  margin: 15px auto 5px auto;
+  text-align: center;
+  font-style: italic;
+}
+
+.footer a {
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }

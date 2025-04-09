@@ -2,6 +2,7 @@
   "name": "random-quote-generator",
   "private": true,
   "version": "0.0.0",
+  "author": "Muwanga David Richard",
   "type": "module",
   "scripts": {
     "dev": "vite",

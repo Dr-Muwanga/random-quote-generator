@@ -1,27 +1,20 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import {FaQuoteLeft} from 'react-icons/fa'
 import {FaXTwitter} from 'react-icons/fa6'
 import { Colors } from "./color";
-
-const url = "https://api.quotable.io/random";
+import quotes from "../lib/quotes";
 
 const Container = () => {
   const [quote, setQuote] = useState([]);
   const [color, setColor] = useState("");
 
-  const fetchData = async () => {
-    try {
-      const res = await fetch(url);
-      if(typeof res === 'undefined') return
-      const response = await res.json();
-      setQuote(response);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const getRandomQuote = () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    setQuote(quotes[randomIndex]);
+  }
+
   useEffect(() => {
-    fetchData();
+    getRandomQuote()
   }, []);
 
   const changeColor = () => {
@@ -40,7 +33,7 @@ const Container = () => {
   return (
       <div id="quote-box">
         <div className="quote-text">
-          <span id="text" key={quote._id} style={{color:color}}> <FaQuoteLeft className="icon"/> {quote.content}</span>
+          <span id="text" key={quote._id} style={{color:color}}> <FaQuoteLeft className="icon"/> {quote.text}</span>
         </div>
         <div className="quote-author">
           <span id="author" style={{color:color}}>-{quote.author}</span>
@@ -60,15 +53,15 @@ const Container = () => {
             className="button"
             id="new-quote" style={{background:color}}
             onClick={() => {
-              fetchData();
+              getRandomQuote();
               changeColor();
             }}
           >
             New Quote
           </button>
         </div>
-        <div className="footer"><a href="https://github.com/Dr-Muwanga/Dr-Muwanga">
-        By Dr. Muwanga</a></div>
+        <div className="footer"><a href="https://github.com/Dr-Muwanga" target="_blank" rel="noreferrer" >
+        Designed with love by Dr. Muwanga</a></div>
       </div>
   );
 };
