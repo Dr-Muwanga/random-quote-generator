@@ -21,6 +21,7 @@ div {
   position: relative;
   z-index: 2;
 }
+
 .footer {
   width: 450px;
   text-align: center;
@@ -38,12 +39,47 @@ div {
 #quote-box {
   border-radius: 3px;
   position: relative;
-  width: 450px;
+  max-width: 450px;
   padding: 40px 50px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   display: table;
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  #quote-box {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  #quote-box .quote-text {
+    font-size: 1.2rem;
+    padding: 0 20px 0 20px;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  #quote-box .quote-author {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  #quote-box .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #quote-box .buttons .button {
+    width: auto;
+    padding: 10px 15px;
+    margin-top: 20px;
+  }
 }
 
 #quote-box .quote-text {
