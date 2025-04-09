@@ -55,10 +55,7 @@ div {
 
   #quote-box .quote-text {
     font-size: 1.2rem;
-    padding: 0 20px 0 20px;
-    width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    padding: 0 60px 0 60px;
   }
 
   #quote-box .quote-author {
